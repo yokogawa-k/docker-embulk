@@ -6,34 +6,64 @@ Docker Image for [embulk/embulk](https://github.com/embulk/embulk#quick-start)
 
 [Treasure Dataの新データ転送ツールEmbulkを触ってみた #dtm_meetup ｜ Developers.IO](http://dev.classmethod.jp/tool/embulk-ataglance/) を参考にしています。
 
+### セットアップ
+
 ```console
 $ git clone https://github.com/yokogawa-k/docker-embulk.git
 $ cd docker-embulk
 $ docker build -t yokogawa/embulk .
-$ # help
+```
+
+### help
+
+```console
 $ docker run -t -v ${PWD}:/work yokogawa/embulk
-$ # example
+```
+
+### example
+
+```console
 $ docker run -t -v ${PWD}:/work yokogawa/embulk example ./try1
 $ docker run -t -v ${PWD}:/work yokogawa/embulk guess ./try1/example.yml -o config.yml
-$ # dry-run
+```
+
+### dry-run
+
+```console
 $ docker run -t -v ${PWD}:/work yokogawa/embulk preview config.yml
-$ # run
+```
+
+### run
+
+```console
 $ docker run -t -v ${PWD}:/work yokogawa/embulk run config.yml
 ```
 
-### 付属の run スクリプトを使った場合
+付属の run スクリプトを使った場合
+----
 
-サンプルの実行が以下のようになります
+### help
 
 ```console
-$ # help
 $ ./run
-$ # example
+```
+
+### example
+
+```console
 $ ./run example ./try1
 $ ./run guess ./try1/example.yml -o config.yml
-$ # dry-run
+```
+
+### dry-run
+
+```console
 $ ./run preview config.yml
-$ # run
+```
+
+### run
+
+```console
 $ ./run run config.yml
 ```
 
