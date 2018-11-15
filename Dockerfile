@@ -6,4 +6,4 @@ RUN curl -L https://bintray.com/artifact/download/embulk/maven/embulk-${EMBULK_V
 
 WORKDIR /work
 ENTRYPOINT ["java", "-jar", "/opt/embulk.jar"]
-CMD ["java -version"]
+CMD ["--help"]
