@@ -9,34 +9,34 @@ Docker Image for [embulk/embulk](https://github.com/embulk/embulk#quick-start)
 ### セットアップ
 
 ```console
-$ git clone https://github.com/yokogawa-k/docker-embulk.git
+$ git clone https://github.com/Y-Fujikawa/docker-embulk.git
 $ cd docker-embulk
-$ docker build -t yokogawa/embulk .
+$ docker build -t fujiyasu/embulk .
 ```
 
 ### help
 
 ```console
-$ docker run -t -v ${PWD}:/work yokogawa/embulk
+$ docker run -t -v ${PWD}:/work fujiyasu/embulk
 ```
 
 ### example
 
 ```console
-$ docker run -t -v ${PWD}:/work yokogawa/embulk example ./try1
-$ docker run -t -v ${PWD}:/work yokogawa/embulk guess ./try1/example.yml -o config.yml
+$ docker run -t -v ${PWD}:/work fujiyasu/embulk example ./try1
+$ docker run -t -v ${PWD}:/work fujiyasu/embulk guess ./try1/example.yml -o config.yml
 ```
 
 ### dry-run
 
 ```console
-$ docker run -t -v ${PWD}:/work yokogawa/embulk preview config.yml
+$ docker run -t -v ${PWD}:/work fujiyasu/embulk preview config.yml
 ```
 
 ### run
 
 ```console
-$ docker run -t -v ${PWD}:/work yokogawa/embulk run config.yml
+$ docker run -t -v ${PWD}:/work fujiyasu/embulk run config.yml
 ```
 
 付属の run スクリプトを使った場合

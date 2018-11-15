@@ -1,2 +1,2 @@
 embulk:
-    image: yokogawa/embulk
+    image: fujiyasu/embulk
